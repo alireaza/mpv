@@ -1,5 +1,5 @@
 Build:
-docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) -t alireaza/mpv .
+docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) --tag alireaza/mpv:$(date -u +%Y%m%d) --tag alireaza/mpv .
 
 Run:
 docker run \
