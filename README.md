@@ -1,8 +1,14 @@
-Build:
-docker build --build-arg UID=$(id -u) --build-arg GID=$(id -g) --tag alireaza/mpv:$(date -u +%Y%m%d) --tag alireaza/mpv .
+# MPV
 
-Run:
-docker run \
+## Build
+Via GitHub repository
+```bash
+$ docker build --tag alireaza/mpv:$(date -u +%Y%m%d) --tag alireaza/mpv:latest https://github.com/alireaza/mpv.git
+```
+
+## Run
+```bash
+$ docker run \
 --interactive \
 --tty \
 --rm \
@@ -15,3 +21,5 @@ docker run \
 --name="mpv" \
 alireaza/mpv \
 "<File/Link>"
+```
+
